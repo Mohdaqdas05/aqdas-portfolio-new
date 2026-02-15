@@ -566,7 +566,13 @@
   }
 }
 
+/* Tablet Devices */
 @media (max-width: 968px) {
+  .hero {
+    min-height: auto;
+    padding: 4rem 0 2rem;
+  }
+
   .hero-content {
     flex-direction: column-reverse;
     text-align: center;
@@ -590,12 +596,29 @@
     font-size: 1.8rem;
   }
 
+  .hero-description {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
   .hero-stats {
     justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .stat-card {
+    padding: 1rem 1.2rem;
   }
 
   .hero-cta {
     justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 1rem 1.8rem;
+    font-size: 1rem;
   }
 
   .image-frame {
@@ -620,62 +643,151 @@
 
   .badge-1 {
     right: 5%;
+    top: 15%;
   }
 
   .badge-2 {
     right: 0%;
+    bottom: 30%;
   }
 
   .badge-3 {
     right: 10%;
+    bottom: 10%;
+  }
+
+  .scroll-indicator {
+    bottom: 1rem;
   }
 }
 
+/* Mobile Devices */
 @media (max-width: 576px) {
+  .hero {
+    padding: 3rem 0 1.5rem;
+  }
+
+  .hero-content {
+    padding: 1.5rem 1rem;
+    gap: 2rem;
+  }
+
+  .hero-greeting {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .line-accent {
+    width: 40px;
+  }
+
   .hero-name {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
+    line-height: 1.2;
   }
 
   .hero-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    margin: 1rem 0;
   }
 
   .hero-description {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 1.5rem 0;
   }
 
   .hero-stats {
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.8rem;
+    margin: 1.5rem 0;
   }
 
   .stat-card {
-    flex: 1;
-    min-width: 100px;
+    flex: 1 1 calc(33.333% - 0.8rem);
+    min-width: 90px;
+    padding: 0.8rem 0.6rem;
+  }
+
+  .stat-number {
+    font-size: 1.4rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
   }
 
   .hero-cta {
     flex-direction: column;
     align-items: stretch;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 0.95rem;
+    justify-content: center;
   }
 
   .image-frame {
-    width: 280px;
-    height: 280px;
-  }
-
-  .profile-photo {
-    width: 240px;
-    height: 240px;
-  }
-
-  .image-border {
     width: 260px;
     height: 260px;
   }
 
+  .profile-photo {
+    width: 220px;
+    height: 220px;
+  }
+
+  .image-border {
+    width: 240px;
+    height: 240px;
+  }
+
   .floating-badge {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.7rem;
+    gap: 0.3rem;
+  }
+
+  .badge-icon {
+    font-size: 0.9rem;
+  }
+
+  .badge-1 {
+    top: 10%;
+    right: -5%;
+  }
+
+  .badge-2 {
+    bottom: 35%;
+    right: -10%;
+  }
+
+  .badge-3 {
+    bottom: 5%;
+    right: 0%;
+  }
+
+  .floating-element {
+    display: none; /* Hide decorative elements on very small screens */
+  }
+
+  .scroll-indicator {
+    bottom: 0.5rem;
+    transform: translateX(-50%) scale(0.9);
+  }
+
+  .scroll-text {
     font-size: 0.75rem;
-    padding: 0.5rem 0.8rem;
+  }
+
+  /* Reduce glow effects for better performance on mobile */
+  .glow-effect {
+    filter: blur(60px);
+    opacity: 0.15;
   }
 }

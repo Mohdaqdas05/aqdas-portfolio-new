@@ -1,0 +1,357 @@
+/* Mobile-Specific Enhancements and Touch Interactions */
+
+/* Improve tap target sizes for better mobile UX */
+@media (max-width: 768px) {
+  /* Minimum touch target size of 44x44px (Apple HIG) or 48x48px (Material Design) */
+  button,
+  a,
+  input,
+  textarea,
+  select,
+  .nav-link,
+  .btn-primary,
+  .btn-secondary,
+  .hamburger {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Improve button tap areas */
+  .btn-primary,
+  .btn-secondary,
+  .submit-btn,
+  .github-link,
+  .cta-button {
+    padding: 1rem 1.5rem;
+    touch-action: manipulation; /* Disable double-tap zoom */
+  }
+
+  /* Remove hover states on touch devices */
+  @media (hover: none) {
+    *:hover {
+      transform: none !important;
+    }
+
+    /* Add active states instead for touch feedback */
+    button:active,
+    a:active,
+    .btn-primary:active,
+    .btn-secondary:active {
+      opacity: 0.8;
+      transform: scale(0.98);
+    }
+
+    .nav-link:active {
+      background: rgba(0, 217, 255, 0.15);
+    }
+
+    .stat-card:active,
+    .skill-category:active,
+    .project-card:active,
+    .blog-card:active {
+      transform: scale(0.98);
+    }
+  }
+
+  /* Smooth scrolling for mobile */
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Prevent text selection on buttons and interactive elements */
+  button,
+  .btn-primary,
+  .btn-secondary,
+  .hamburger,
+  .nav-link {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 217, 255, 0.2);
+  }
+
+  /* Improve form input experience on mobile */
+  input,
+  textarea,
+  select {
+    font-size: 16px; /* Prevent zoom on iOS */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  /* Better focus states for accessibility */
+  input:focus,
+  textarea:focus,
+  select:focus,
+  button:focus {
+    outline: 2px solid #00d9ff;
+    outline-offset: 2px;
+  }
+
+  /* Optimize animations for mobile performance */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Sticky elements optimization */
+  .navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    will-change: transform;
+  }
+
+  /* Improve scroll performance */
+  .hero-canvas,
+  .hero-background,
+  .glow-effect,
+  .particle-system {
+    will-change: auto; /* Remove will-change on mobile for better performance */
+  }
+
+  /* Safe area padding for notched devices (iPhone X, etc.) */
+  .navbar {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  .hero-content,
+  .section-container {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+
+  /* Improve card tap interactions */
+  .stat-card,
+  .skill-category,
+  .project-card,
+  .blog-card,
+  .info-card,
+  .highlight-card {
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  /* Floating Action Button style for mobile navigation */
+  .scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #00d9ff, #00ff88);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 217, 255, 0.4);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+
+  .scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .scroll-to-top:active {
+    transform: scale(0.9);
+  }
+
+  /* Improve spacing for mobile readability */
+  p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Better link tap targets */
+  a {
+    padding: 0.25rem;
+    margin: -0.25rem;
+  }
+
+  /* Prevent horizontal scrolling */
+  body {
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Optimize images for mobile */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Better mobile menu animation */
+  .nav-menu {
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .nav-menu.active {
+    transform: translateX(0);
+  }
+
+  /* Loading states for better UX */
+  .loading {
+    cursor: wait;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  /* Swipe gesture hints */
+  .swipeable {
+    touch-action: pan-x;
+  }
+
+  /* Better spacing for touch */
+  .hero-stats,
+  .hero-cta,
+  .tech-stack,
+  .social-links {
+    gap: 1rem;
+  }
+
+  /* Improve modal/overlay on mobile */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    touch-action: none;
+  }
+
+  /* Pull-to-refresh prevention for custom interactions */
+  body {
+    overscroll-behavior-y: contain;
+  }
+
+  /* Better contrast for mobile readability */
+  .text-highlight {
+    color: #00d9ff;
+    font-weight: 600;
+  }
+
+  /* Larger icons for better visibility */
+  .category-icon,
+  .card-icon,
+  .info-icon {
+    font-size: 1.5rem;
+  }
+
+  /* Improve table responsiveness (if any tables are added) */
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Better mobile footer spacing */
+  footer {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Small mobile specific (phones) */
+@media (max-width: 576px) {
+  /* Reduce motion for better performance */
+  .glow-effect,
+  .floating-element {
+    animation: none;
+  }
+
+  /* Optimize canvas for small screens */
+  .hero-canvas {
+    opacity: 0.5; /* Reduce canvas opacity for better performance */
+  }
+
+  /* Simpler gradients for better performance */
+  .gradient-text,
+  .name-gradient {
+    animation-duration: 6s; /* Slower animations */
+  }
+
+  /* Better touch feedback */
+  button:active,
+  a:active {
+    background: rgba(0, 217, 255, 0.1);
+  }
+
+  /* Improve readability */
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Better form spacing */
+  .form-group + .form-group {
+    margin-top: 1.25rem;
+  }
+}
+
+/* Portrait orientation specific */
+@media (orientation: portrait) and (max-width: 768px) {
+  .hero {
+    min-height: 100vh;
+  }
+
+  .hero-content {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+/* Landscape orientation specific */
+@media (orientation: landscape) and (max-height: 500px) {
+  .hero {
+    min-height: auto;
+    padding: 2rem 0;
+  }
+
+  .hero-content {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .image-frame {
+    width: 200px;
+    height: 200px;
+  }
+
+  .profile-photo {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* High DPI screens (Retina displays) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Optimize for retina displays */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
