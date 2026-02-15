@@ -1,0 +1,278 @@
+.about {
+  padding: 100px 2rem;
+  background: #ffffff;
+  position: relative;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-label {
+  color: #00d9ff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin: 0.5rem 0;
+  font-weight: 700;
+}
+
+.title-underline {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #00d9ff, #00ff88);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+  align-items: start;
+}
+
+.about-image-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.about-image-wrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.about-image-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110%;
+  height: 110%;
+  background: radial-gradient(circle, rgba(0, 217, 255, 0.3), transparent 70%);
+  border-radius: 20px;
+  filter: blur(30px);
+  animation: aboutGlow 3s ease-in-out infinite;
+}
+
+@keyframes aboutGlow {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.about-profile-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  border: 3px solid rgba(0, 217, 255, 0.3);
+  box-shadow: 
+    0 10px 40px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(0, 217, 255, 0.2);
+}
+
+.about-text-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-intro {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.about-description {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.education-card {
+  background: linear-gradient(135deg, #1a1a1a, #000);
+  border-radius: 20px;
+  padding: 2.5rem;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-glow {
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0, 217, 255, 0.2), transparent);
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #00d9ff, #00ff88);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: #000;
+  position: relative;
+  z-index: 1;
+}
+
+.card-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin: 0 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.education-details {
+  position: relative;
+  z-index: 1;
+}
+
+.degree {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
+  color: #00d9ff;
+}
+
+.specialization {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.institution {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 1.5rem;
+}
+
+.graduation {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #00ff88;
+  font-weight: 500;
+}
+
+.graduation svg {
+  width: 18px;
+  height: 18px;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.highlight-card {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: #f8f9fa;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.highlight-card:hover {
+  transform: translateY(-5px);
+  border-color: #00d9ff;
+  box-shadow: 0 10px 30px rgba(0, 217, 255, 0.15);
+}
+
+.highlight-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.highlight-card h4 {
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  margin: 0 0 0.75rem;
+}
+
+.highlight-card p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 968px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 60px 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .about-intro {
+    font-size: 1.1rem;
+  }
+
+  .education-card {
+    padding: 2rem 1.5rem;
+  }
+}
