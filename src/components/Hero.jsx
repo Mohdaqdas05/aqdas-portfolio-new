@@ -154,7 +154,7 @@ const Hero = () => {
           <div className="image-frame">
             <div className="image-glow"></div>
             <img 
-              src="/aqdas-photo.jpg" 
+              src={`${import.meta.env.BASE_URL}aqdas-photo.jpg`}
               alt="Mohd Aqdas Farooqui" 
               className="profile-photo"
             />

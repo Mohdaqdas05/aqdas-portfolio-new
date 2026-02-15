@@ -15,7 +15,7 @@ const About = () => {
             <div className="about-image-wrapper">
               <div className="about-image-glow"></div>
               <img 
-                src="/aqdas-photo.jpg" 
+                src={`${import.meta.env.BASE_URL}aqdas-photo.jpg`}
                 alt="Mohd Aqdas Farooqui" 
                 className="about-profile-photo"
               />
