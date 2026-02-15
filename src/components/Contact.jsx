@@ -21,12 +21,15 @@ const Contact = () => {
     e.preventDefault();
     setFormStatus('sending');
 
+    // Method 1: Try Formspree
     try {
-      // Using Formspree - free email service
-      const response = await fetch('https://formspree.io/f/xanyawnd', {
+      const formspreeEndpoint = 'https://formspree.io/f/mldeoedg'; // Updated endpoint
+      
+      const response = await fetch(formspreeEndpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
         body: JSON.stringify({
           name: formData.name,
@@ -36,6 +39,8 @@ const Contact = () => {
           _subject: `Portfolio Contact: Message from ${formData.name}`,
         }),
       });
+
+      const data = await response.json();
 
       if (response.ok) {
         setFormStatus('success');
@@ -48,14 +53,31 @@ const Contact = () => {
         
         setTimeout(() => setFormStatus(''), 5000);
       } else {
-        setFormStatus('error');
-        setTimeout(() => setFormStatus(''), 5000);
+        // If Formspree fails, fallback to mailto
+        console.log('Formspree error, using mailto fallback');
+        handleMailtoFallback();
       }
     } catch (error) {
       console.error('Form submission error:', error);
-      setFormStatus('error');
-      setTimeout(() => setFormStatus(''), 5000);
+      // Fallback to mailto if fetch fails
+      handleMailtoFallback();
     }
+  };
+
+  const handleMailtoFallback = () => {
+    // Fallback: Open default email client with pre-filled data
+    const subject = encodeURIComponent(`Portfolio Contact: Message from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n\n` +
+      `Message:\n${formData.message}`
+    );
+    
+    window.location.href = `mailto:aqdasalifarooqui41@gmail.com?subject=${subject}&body=${body}`;
+    
+    setFormStatus('success');
+    setFormData({ name: '', email: '', message: '' });
+    setTimeout(() => setFormStatus(''), 5000);
   };
 
   const contactInfo = [
