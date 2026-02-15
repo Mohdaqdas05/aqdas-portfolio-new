@@ -17,15 +17,45 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Simulate form submission
     setFormStatus('sending');
-    setTimeout(() => {
-      setFormStatus('success');
-      setFormData({ name: '', email: '', message: '' });
-      setTimeout(() => setFormStatus(''), 3000);
-    }, 1500);
+
+    try {
+      // Using Formspree - free email service
+      const response = await fetch('https://formspree.io/f/xanyawnd', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _replyto: formData.email,
+          _subject: `Portfolio Contact: Message from ${formData.name}`,
+        }),
+      });
+
+      if (response.ok) {
+        setFormStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+        
+        // Track form submission in analytics
+        if (window.mobileAnalytics) {
+          window.mobileAnalytics.trackFormSubmit('contact_form', true);
+        }
+        
+        setTimeout(() => setFormStatus(''), 5000);
+      } else {
+        setFormStatus('error');
+        setTimeout(() => setFormStatus(''), 5000);
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setFormStatus('error');
+      setTimeout(() => setFormStatus(''), 5000);
+    }
   };
 
   const contactInfo = [
@@ -171,7 +201,13 @@ const Contact = () => {
 
               {formStatus === 'success' && (
                 <div className="success-message">
-                  ✓ Thank you! Your message has been received. I'll get back to you soon.
+                  ✓ Thank you! Your message has been sent to my email. I'll get back to you soon!
+                </div>
+              )}
+              
+              {formStatus === 'error' && (
+                <div className="error-message">
+                  ✗ Oops! Something went wrong. Please try again or email me directly at aqdasalifarooqui41@gmail.com
                 </div>
               )}
             </form>
