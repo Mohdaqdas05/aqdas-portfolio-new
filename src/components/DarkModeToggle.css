@@ -1,0 +1,196 @@
+.dark-mode-toggle {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00d9ff, #00ff88);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    0 4px 15px rgba(0, 217, 255, 0.4),
+    0 0 20px rgba(0, 217, 255, 0.2);
+  transition: all 0.3s ease;
+  z-index: 998;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.dark-mode-toggle:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 
+    0 8px 25px rgba(0, 217, 255, 0.5),
+    0 0 30px rgba(0, 217, 255, 0.3);
+}
+
+.dark-mode-toggle:active {
+  transform: translateY(-1px) scale(1);
+}
+
+.toggle-icon {
+  width: 28px;
+  height: 28px;
+  color: #0a0a0a;
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.toggle-icon.dark {
+  animation: rotate 0.5s ease;
+}
+
+.toggle-icon.light {
+  animation: rotate 0.5s ease reverse;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg) scale(0);
+  }
+  to {
+    transform: rotate(180deg) scale(1);
+  }
+}
+
+.toggle-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Dark Mode Styles */
+:root.dark-mode {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --bg-light: #2a2a2a;
+  --text-primary: #ffffff;
+  --text-secondary: #b0b0b0;
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* About section in dark mode */
+.dark-mode .about {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+  color: #ffffff;
+}
+
+.dark-mode .section-title {
+  color: #ffffff;
+}
+
+.dark-mode .about-intro,
+.dark-mode .about-description {
+  color: #b8b8b8;
+}
+
+.dark-mode .highlight-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(0, 217, 255, 0.2);
+}
+
+.dark-mode .highlight-card h4 {
+  color: #ffffff;
+}
+
+.dark-mode .highlight-card p {
+  color: #b0b0b0;
+}
+
+/* Projects section in dark mode */
+.dark-mode .projects {
+  background: #0a0a0a;
+}
+
+.dark-mode .project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .project-title,
+.dark-mode .project-features h4 {
+  color: #ffffff;
+}
+
+.dark-mode .project-description,
+.dark-mode .project-features li {
+  color: #b0b0b0;
+}
+
+.dark-mode .section-subtitle,
+.dark-mode .projects-cta p {
+  color: #b0b0b0;
+}
+
+/* Contact section in dark mode */
+.dark-mode .contact {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+}
+
+.dark-mode .contact-form-wrapper {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(0, 217, 255, 0.2);
+}
+
+.dark-mode .form-group input,
+.dark-mode .form-group textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.dark-mode .form-group label {
+  color: #b0b0b0;
+}
+
+.dark-mode .info-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(0, 217, 255, 0.2);
+}
+
+/* Mobile specific positioning */
+@media (max-width: 768px) {
+  .dark-mode-toggle {
+    bottom: 5rem;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
+  }
+
+  .toggle-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .dark-mode-toggle {
+    bottom: 4.5rem;
+    right: 0.75rem;
+    width: 48px;
+    height: 48px;
+  }
+
+  .toggle-icon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* Smooth transitions for dark mode */
+.dark-mode * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Ensure images don't get too dark */
+.dark-mode img {
+  opacity: 0.9;
+}
+
+.dark-mode .profile-photo,
+.dark-mode .about-profile-photo {
+  opacity: 1;
+}
