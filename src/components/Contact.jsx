@@ -23,7 +23,7 @@ const Contact = () => {
 
     // Method 1: Try Formspree
     try {
-      const formspreeEndpoint = 'https://formspree.io/f/mldeoedg'; // Updated endpoint
+      const formspreeEndpoint = 'https://formspree.io/f/xwvnowqo'; // Your verified Formspree endpoint
       
       const response = await fetch(formspreeEndpoint, {
         method: 'POST',
