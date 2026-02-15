@@ -93,7 +93,7 @@ const Footer = () => {
           </div>
 
           <p className="made-with">
-            Made with <span className="heart">❤️</span> and React
+            Made by <span className="heart">AQDAS</span>
           </p>
         </div>
       </div>
