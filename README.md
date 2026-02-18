@@ -22,54 +22,9 @@ A modern, futuristic portfolio website built with React and Vite, showcasing AI 
 - CSS3 (with custom animations and gradients)
 - JavaScript ES6+
 
-## 📦 Installation & Setup
+## 🌐 Deployed on github
 
-1. **Install Dependencies**
-   ```bash
-   npm install
-   ```
-
-2. **Run Development Server**
-   ```bash
-   npm run dev
-   ```
-   The site will be available at `http://localhost:5173/`
-
-3. **Build for Production**
-   ```bash
-   npm run build
-   ```
-   This creates an optimized build in the `dist` folder.
-
-4. **Preview Production Build**
-   ```bash
-   npm run preview
-   ```
-
-## 🌐 Deployment to Lovable.app
-
-To deploy this website to `https://preview--aqdas-ai-folio.lovable.app/`:
-
-### Option 1: Using Lovable Platform
-1. Go to [Lovable.app](https://lovable.app)
-2. Create a new project or import existing
-3. Connect your repository or upload the project files
-4. Lovable will automatically build and deploy
-
-### Option 2: Manual Build & Deploy
-1. Build the project:
-   ```bash
-   npm run build
-   ```
-2. The `dist` folder contains all production files
-3. Upload the contents of `dist` folder to your Lovable project
-
-### Option 3: GitHub Integration
-1. Push this code to a GitHub repository
-2. Connect the repository to Lovable
-3. Set build command: `npm run build`
-4. Set publish directory: `dist`
-5. Lovable will auto-deploy on each push
+ visit this website to `https://aqdasportfolio.in :
 
 ## 📁 Project Structure
 
@@ -130,4 +85,4 @@ This project is open source and available for personal use.
 
 ---
 
-Built with ❤️ and React
+Built with React
