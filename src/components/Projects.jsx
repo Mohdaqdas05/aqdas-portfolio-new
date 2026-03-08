@@ -33,34 +33,36 @@ const Projects = () => {
       githubLink: "https://github.com/Mohdaqdas05"
     },
     {
-      title: "Data Analysis Dashboard",
-      category: "Python & Data Science",
-      description: "An interactive data analysis project using Python libraries to visualize and extract insights from real-world datasets, featuring statistical summaries and trend analysis.",
+      title: "AQIZA AI",
+      category: "AI Platform / Full Stack",
+      description: "A production-grade ChatGPT-like AI platform with streaming responses, multi-conversation support, and Google OAuth authentication.",
       features: [
-        "Data cleaning and preprocessing with Pandas",
-        "Statistical analysis and visualization with Matplotlib",
-        "Trend detection and pattern recognition",
-        "Exportable reports and summaries"
+        "Streaming AI responses via Server-Sent Events (SSE)",
+        "Multi-conversation support with chat history",
+        "Google OAuth + JWT authentication with refresh token rotation",
+        "Plan-gated AI model selection via OpenRouter API",
+        "Admin panel with user management and stats dashboard"
       ],
-      techStack: ["Python", "Pandas", "Matplotlib", "NumPy"],
-      icon: "📊",
-      gradient: "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
-      githubLink: "https://github.com/Mohdaqdas05"
+      techStack: ["React", "Node.js", "PostgreSQL", "OpenRouter API", "JWT", "Vite"],
+      icon: "🧠",
+      gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      githubLink: "https://github.com/Mohdaqdas05/aqizaai"
     },
     {
-      title: "AI Chatbot Assistant",
-      category: "AI / NLP",
-      description: "A rule-based and ML-assisted chatbot built in Python that can answer FAQs, handle user queries intelligently, and provide context-aware responses.",
+      title: "HEMS Security Project",
+      category: "Security / Healthcare Systems",
+      description: "Secure, privacy-first Hospital Emergency Management System with abuse-resistant emergency escalation, consent-based photo evidence, and real-time hospital availability.",
       features: [
-        "Natural Language Processing for intent detection",
-        "Rule-based response system with ML enhancements",
-        "Conversation history and context management",
-        "Extensible knowledge base"
+        "Abuse-resistant emergency escalation system",
+        "Consent-based photo evidence handling",
+        "Real-time hospital bed & resource availability",
+        "Row-Level Security with PostgreSQL and pgcrypto encryption",
+        "Microservices architecture with Kubernetes & Istio"
       ],
-      techStack: ["Python", "NLP", "Machine Learning", "JSON"],
-      icon: "🤖",
-      gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
-      githubLink: "https://github.com/Mohdaqdas05"
+      techStack: ["Next.js", "TypeScript", "PostgreSQL", "Kubernetes", "Tailwind CSS", "Docker"],
+      icon: "🏥",
+      gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+      githubLink: "https://github.com/Mohdaqdas05/HEMS-security-project"
     }
   ];
 
@@ -72,7 +74,7 @@ const Projects = () => {
           <h2 className="section-title">Featured Projects</h2>
           <div className="title-underline"></div>
           <p className="section-subtitle">
-            Academic and self-initiated projects showcasing practical application of technical concepts
+            Real-world and academic projects showcasing practical application of technical concepts
           </p>
         </div>
 
