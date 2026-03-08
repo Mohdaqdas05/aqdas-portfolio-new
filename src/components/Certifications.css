@@ -1,0 +1,120 @@
+.certifications {
+  padding: 100px 2rem;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.certifications-background {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+}
+
+.cert-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.07;
+}
+
+.cert-orb.orb-1 {
+  width: 400px; height: 400px;
+  background: #00d9ff;
+  top: -100px; right: -100px;
+}
+
+.cert-orb.orb-2 {
+  width: 300px; height: 300px;
+  background: #00ff88;
+  bottom: -50px; left: -50px;
+}
+
+.certifications .section-label { color: #00d9ff; }
+.certifications .section-title { color: #1a1a1a; }
+.certifications .title-underline {
+  width: 60px; height: 4px;
+  background: linear-gradient(90deg, #00d9ff, #00ff88);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.certifications .section-subtitle {
+  color: #666;
+  font-size: 1.05rem;
+  margin-top: 1rem;
+}
+
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.cert-card {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 1.75rem;
+  background: #f8f9fa;
+  border-radius: 16px;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 217, 255, 0.3);
+}
+
+.cert-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cert-icon {
+  font-size: 1.8rem;
+}
+
+.cert-content {
+  flex: 1;
+}
+
+.cert-category {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cert-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0.3rem 0 0.25rem;
+  line-height: 1.4;
+}
+
+.cert-issuer {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0 0 0.5rem;
+}
+
+.cert-date {
+  font-size: 0.8rem;
+  color: #999;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .certifications { padding: 60px 1rem; }
+  .certs-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+}
