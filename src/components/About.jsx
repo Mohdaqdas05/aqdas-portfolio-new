@@ -10,7 +10,7 @@ const About = () => {
           <div className="title-underline"></div>
         </div>
 
-        <div className="about-content">
+        <div className="about-content fade-in-up">
           <div className="about-image-section">
             <div className="about-image-wrapper">
               <div className="about-image-glow"></div>
@@ -18,6 +18,7 @@ const About = () => {
                 src={`${import.meta.env.BASE_URL}aqdas-photo.jpg`}
                 alt="Mohd Aqdas Farooqui" 
                 className="about-profile-photo"
+                loading="lazy"
               />
             </div>
           </div>

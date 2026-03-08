@@ -314,6 +314,27 @@
   transform: translateX(5px);
 }
 
+.btn-resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: transparent;
+  color: #00ff88;
+  border: 2px solid #00ff88;
+  border-radius: 50px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.btn-resume:hover {
+  background: rgba(0, 255, 136, 0.1);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+  transform: translateY(-2px);
+}
+
 .hero-image {
   flex: 1;
   display: flex;

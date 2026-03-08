@@ -4,7 +4,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-import Blog from './components/Blog';
+import Certifications from './components/Certifications';
 import Opportunities from './components/Opportunities';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -12,6 +12,7 @@ import Analytics from './components/Analytics';
 import PWAInstaller from './components/PWAInstaller';
 import DarkModeToggle from './components/DarkModeToggle';
 import mobileAnalytics from './utils/mobileAnalytics';
+import useScrollAnimation from './hooks/useScrollAnimation';
 import './App.css';
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
     // Initialize mobile analytics
     mobileAnalytics.init();
   }, []);
+
+  useScrollAnimation();
 
   return (
     <div className="App">
@@ -30,7 +33,7 @@ function App() {
       <About />
       <Skills />
       <Projects />
-      <Blog />
+      <Certifications />
       <Opportunities />
       <Contact />
       <Footer />

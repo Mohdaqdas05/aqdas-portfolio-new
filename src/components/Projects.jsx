@@ -14,7 +14,8 @@ const Projects = () => {
       ],
       techStack: ["Python", "File Handling", "Data Structures"],
       icon: "🏥",
-      gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+      gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      githubLink: "https://github.com/Mohdaqdas05"
     },
     {
       title: "Obstacle Detection Car",
@@ -28,7 +29,38 @@ const Projects = () => {
       ],
       techStack: ["C Programming", "Sensors", "Microcontrollers", "Hardware Integration"],
       icon: "🚗",
-      gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
+      gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+      githubLink: "https://github.com/Mohdaqdas05"
+    },
+    {
+      title: "Data Analysis Dashboard",
+      category: "Python & Data Science",
+      description: "An interactive data analysis project using Python libraries to visualize and extract insights from real-world datasets, featuring statistical summaries and trend analysis.",
+      features: [
+        "Data cleaning and preprocessing with Pandas",
+        "Statistical analysis and visualization with Matplotlib",
+        "Trend detection and pattern recognition",
+        "Exportable reports and summaries"
+      ],
+      techStack: ["Python", "Pandas", "Matplotlib", "NumPy"],
+      icon: "📊",
+      gradient: "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
+      githubLink: "https://github.com/Mohdaqdas05"
+    },
+    {
+      title: "AI Chatbot Assistant",
+      category: "AI / NLP",
+      description: "A rule-based and ML-assisted chatbot built in Python that can answer FAQs, handle user queries intelligently, and provide context-aware responses.",
+      features: [
+        "Natural Language Processing for intent detection",
+        "Rule-based response system with ML enhancements",
+        "Conversation history and context management",
+        "Extensible knowledge base"
+      ],
+      techStack: ["Python", "NLP", "Machine Learning", "JSON"],
+      icon: "🤖",
+      gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+      githubLink: "https://github.com/Mohdaqdas05"
     }
   ];
 
@@ -46,7 +78,7 @@ const Projects = () => {
 
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <div key={index} className="project-card">
+            <div key={index} className={`project-card fade-in-up delay-${index + 1}`}>
               <div className="project-header" style={{ background: project.gradient }}>
                 <span className="project-icon">{project.icon}</span>
                 <div className="header-overlay"></div>
@@ -77,6 +109,12 @@ const Projects = () => {
                       <span key={idx} className="tech-tag">{tech}</span>
                     ))}
                   </div>
+                  <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="project-github-link">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                      <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                    </svg>
+                    View on GitHub
+                  </a>
                 </div>
               </div>
             </div>

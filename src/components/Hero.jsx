@@ -125,8 +125,12 @@ const Hero = () => {
               <div className="stat-label">Graduating</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number">2+</div>
+              <div className="stat-number">4+</div>
               <div className="stat-label">Projects</div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-number">3+</div>
+              <div className="stat-label">Certifications</div>
             </div>
             <div className="stat-card">
               <div className="stat-number">AI/ML</div>
@@ -147,6 +151,12 @@ const Hero = () => {
                 <path d="M3 8L10 13L17 8M3 6H17V14H3V6Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </button>
+            <a href={`${import.meta.env.BASE_URL}resume.pdf`} download="Mohd_Aqdas_Farooqui_Resume.pdf" className="btn-resume">
+              <span>Download Resume</span>
+              <svg className="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M10 3v10M10 13l-3-3M10 13l3-3M4 17h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </a>
           </div>
         </div>
         

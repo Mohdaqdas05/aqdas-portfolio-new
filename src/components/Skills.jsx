@@ -1,38 +1,37 @@
-import { useState } from 'react';
 import './Skills.css';
 
 const Skills = () => {
-  const [hoveredSkill, setHoveredSkill] = useState(null);
-
   const skillCategories = [
     {
       title: "Programming & Core Skills",
       icon: "💻",
       skills: [
-        { name: "Python", level: 85 },
-        { name: "C", level: 75 },
-        { name: "C++", level: 75 },
-        { name: "Data Structures", level: 80 },
-        { name: "Logical Problem Solving", level: 85 }
+        { name: "Python", level: "Proficient" },
+        { name: "C", level: "Intermediate" },
+        { name: "C++", level: "Intermediate" },
+        { name: "Data Structures", level: "Proficient" },
+        { name: "Logical Problem Solving", level: "Proficient" }
       ]
     },
     {
       title: "AI & Data",
       icon: "🤖",
       skills: [
-        { name: "Python for Data Analysis", level: 80 },
-        { name: "Machine Learning Concepts", level: 70 },
-        { name: "Data Processing", level: 75 }
+        { name: "Python for Data Analysis", level: "Intermediate" },
+        { name: "Machine Learning Concepts", level: "Beginner" },
+        { name: "Data Processing", level: "Intermediate" },
+        { name: "NumPy / Pandas", level: "Beginner" }
       ]
     },
     {
       title: "Tools & Technologies",
       icon: "🛠️",
       skills: [
-        { name: "Git & GitHub", level: 80 },
-        { name: "VS Code", level: 90 },
-        { name: "AutoCAD", level: 70 },
-        { name: "Microsoft Excel", level: 75 }
+        { name: "Git & GitHub", level: "Intermediate" },
+        { name: "VS Code", level: "Proficient" },
+        { name: "AutoCAD", level: "Beginner" },
+        { name: "Microsoft Excel", level: "Intermediate" },
+        { name: "Vite / React", level: "Intermediate" }
       ]
     }
   ];
@@ -50,35 +49,18 @@ const Skills = () => {
           <div className="title-underline"></div>
         </div>
 
-        <div className="skills-grid">
+        <div className="skills-grid fade-in-up">
           {skillCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="skill-category">
+            <div key={categoryIndex} className={`skill-category fade-in-up delay-${categoryIndex + 1}`}>
               <div className="category-header">
                 <span className="category-icon">{category.icon}</span>
                 <h3 className="category-title">{category.title}</h3>
               </div>
               <div className="skills-list">
                 {category.skills.map((skill, skillIndex) => (
-                  <div 
-                    key={skillIndex} 
-                    className="skill-item"
-                    onMouseEnter={() => setHoveredSkill(`${categoryIndex}-${skillIndex}`)}
-                    onMouseLeave={() => setHoveredSkill(null)}
-                  >
-                    <div className="skill-info">
-                      <span className="skill-name">{skill.name}</span>
-                      <span className="skill-percentage">{skill.level}%</span>
-                    </div>
-                    <div className="skill-bar">
-                      <div 
-                        className="skill-progress" 
-                        style={{ 
-                          width: hoveredSkill === `${categoryIndex}-${skillIndex}` ? `${skill.level}%` : '0%'
-                        }}
-                      >
-                        <div className="progress-glow"></div>
-                      </div>
-                    </div>
+                  <div key={skillIndex} className="skill-tag-item">
+                    <span className="skill-tag-name">{skill.name}</span>
+                    <span className={`skill-level-badge level-${skill.level.toLowerCase()}`}>{skill.level}</span>
                   </div>
                 ))}
               </div>
