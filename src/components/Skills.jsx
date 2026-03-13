@@ -20,7 +20,7 @@ const Skills = () => {
         { name: "Python for Data Analysis", level: "Intermediate" },
         { name: "Machine Learning Concepts", level: "Beginner" },
         { name: "Data Processing", level: "Intermediate" },
-        { name: "NumPy / Pandas", level: "Beginner" }
+        { name: "NumPy / Pandas", level: "Learning" }
       ]
     },
     {
@@ -29,9 +29,9 @@ const Skills = () => {
       skills: [
         { name: "Git & GitHub", level: "Intermediate" },
         { name: "VS Code", level: "Proficient" },
-        { name: "AutoCAD", level: "Beginner" },
+        { name: "AutoCAD", level: "Intermediate" },
         { name: "Microsoft Excel", level: "Intermediate" },
-        { name: "Vite / React", level: "Intermediate" }
+        { name: "Vite / React", level: "Beginner" }
       ]
     }
   ];
