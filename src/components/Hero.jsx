@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import './Hero.css';
+import GokuScrollHint from './GokuScrollHint';
 
 const Hero = () => {
   const scrollToSection = (id) => {
@@ -189,10 +190,7 @@ const Hero = () => {
         </div>
       </div>
       
-      <div className="scroll-indicator">
-        <div className="mouse"></div>
-        <span className="scroll-text">Scroll to explore</span>
-      </div>
+      <GokuScrollHint />
     </section>
   );
 };
