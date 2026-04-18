@@ -4,30 +4,33 @@ const Certifications = () => {
   const certifications = [
     {
       id: 1,
-      title: "Python for Everybody",
-      issuer: "Coursera / University of Michigan",
+      title: "HackerRank Certification",
+      issuer: "HackerRank",
       date: "2024",
       category: "Programming",
-      icon: "🐍",
-      color: "#3776ab"
+      icon: "⭐",
+      color: "#00d9ff",
+      link: "https://www.hackerrank.com/certificates/iframe/4514533228a9"
     },
     {
       id: 2,
-      title: "Machine Learning Foundations",
-      issuer: "NPTEL / Online Course",
+      title: "Virtual Experience Program",
+      issuer: "Forage",
       date: "2024",
-      category: "AI & ML",
-      icon: "🤖",
-      color: "#00d9ff"
+      category: "Industry Experience",
+      icon: "🏆",
+      color: "#00ff88",
+      link: "https://www.theforage.com/completion-certificates/mfxGwGDp6WkQmtmTf/"
     },
     {
       id: 3,
-      title: "Data Structures & Algorithms",
-      issuer: "Self-Study / Practice",
-      date: "2023",
-      category: "Computer Science",
-      icon: "📐",
-      color: "#00ff88"
+      title: "Virtual Experience Program",
+      issuer: "Forage",
+      date: "2024",
+      category: "Industry Experience",
+      icon: "🏆",
+      color: "#f093fb",
+      link: "https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/"
     }
   ];
 
@@ -43,12 +46,19 @@ const Certifications = () => {
           <h2 className="section-title">Certifications</h2>
           <div className="title-underline"></div>
           <p className="section-subtitle">
-            Continuous learning through online courses and self-study
+            Verified certifications and virtual experience programs
           </p>
         </div>
         <div className="certs-grid fade-in-up">
           {certifications.map((cert, index) => (
-            <div key={cert.id} className={`cert-card fade-in-up delay-${index + 1}`}>
+            <a
+              key={cert.id}
+              href={cert.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`cert-card fade-in-up delay-${index + 1}`}
+              style={{ textDecoration: 'none' }}
+            >
               <div className="cert-icon-wrapper" style={{ background: `${cert.color}22`, border: `1px solid ${cert.color}44` }}>
                 <span className="cert-icon">{cert.icon}</span>
               </div>
@@ -58,7 +68,7 @@ const Certifications = () => {
                 <p className="cert-issuer">{cert.issuer}</p>
                 <span className="cert-date">{cert.date}</span>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

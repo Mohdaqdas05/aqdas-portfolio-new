@@ -62,7 +62,7 @@ const About = () => {
                     <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" strokeWidth="2"/>
                     <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" strokeWidth="2"/>
                   </svg>
-                  <span>Expected Graduation: 2027</span>
+                  <span>Expected Graduation: 2028</span>
                 </div>
               </div>
             </div>
