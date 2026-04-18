@@ -23,7 +23,7 @@ const Contact = () => {
 
     // Method 1: Try Formspree
     try {
-      const formspreeEndpoint = 'https://formspree.io/f/xwvnowqo'; // Your verified Formspree endpoint
+      const formspreeEndpoint = 'https://formspree.io/f/xanyawnd'; // Verified Formspree endpoint
       
       const response = await fetch(formspreeEndpoint, {
         method: 'POST',
@@ -53,14 +53,13 @@ const Contact = () => {
         
         setTimeout(() => setFormStatus(''), 5000);
       } else {
-        // If Formspree fails, fallback to mailto
-        console.log('Formspree error, using mailto fallback');
-        handleMailtoFallback();
+        // Formspree returned an error response
+        console.log('Formspree error:', data);
+        setFormStatus('error');
       }
     } catch (error) {
       console.error('Form submission error:', error);
-      // Fallback to mailto if fetch fails
-      handleMailtoFallback();
+      setFormStatus('error');
     }
   };
 
