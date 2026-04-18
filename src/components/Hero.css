@@ -513,58 +513,6 @@
   }
 }
 
-.scroll-indicator {
-  position: absolute;
-  bottom: 2.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-.mouse {
-  width: 28px;
-  height: 48px;
-  border: 2px solid rgba(0, 217, 255, 0.6);
-  border-radius: 15px;
-  position: relative;
-}
-
-.mouse::before {
-  content: '';
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 10px;
-  background: #00d9ff;
-  border-radius: 2px;
-  animation: mouseScroll 2s ease-in-out infinite;
-}
-
-@keyframes mouseScroll {
-  0% {
-    opacity: 1;
-    top: 10px;
-  }
-  100% {
-    opacity: 0;
-    top: 28px;
-  }
-}
-
-.scroll-text {
-  font-size: 0.85rem;
-  color: rgba(0, 217, 255, 0.7);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 500;
-}
-
 /* Responsive Design */
 @media (max-width: 1200px) {
   .hero-content {
@@ -675,10 +623,6 @@
   .badge-3 {
     right: 10%;
     bottom: 10%;
-  }
-
-  .scroll-indicator {
-    bottom: 1rem;
   }
 }
 
@@ -795,15 +739,6 @@
 
   .floating-element {
     display: none; /* Hide decorative elements on very small screens */
-  }
-
-  .scroll-indicator {
-    bottom: 0.5rem;
-    transform: translateX(-50%) scale(0.9);
-  }
-
-  .scroll-text {
-    font-size: 0.75rem;
   }
 
   /* Reduce glow effects for better performance on mobile */
