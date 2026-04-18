@@ -121,7 +121,7 @@ const Hero = () => {
           
           <div className="hero-stats">
             <div className="stat-card">
-              <div className="stat-number">2027</div>
+              <div className="stat-number">2028</div>
               <div className="stat-label">Graduating</div>
             </div>
             <div className="stat-card">
@@ -177,7 +177,7 @@ const Hero = () => {
           </div>
           <div className="floating-badge badge-2">
             <span className="badge-icon">💻</span>
-            <span className="badge-text">Python Dev</span>
+            <span className="badge-text">JS/TS Dev</span>
           </div>
           <div className="floating-badge badge-3">
             <span className="badge-icon">🤖</span>

@@ -3,35 +3,43 @@ import './Skills.css';
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Programming & Core Skills",
+      title: "Programming Languages",
       icon: "💻",
       skills: [
-        { name: "Python", level: "Proficient" },
-        { name: "C", level: "Intermediate" },
-        { name: "C++", level: "Intermediate" },
-        { name: "Data Structures", level: "Proficient" },
-        { name: "Logical Problem Solving", level: "Proficient" }
+        { name: "JavaScript", level: "Proficient" },
+        { name: "TypeScript", level: "Proficient" }
       ]
     },
     {
-      title: "AI & Data",
-      icon: "🤖",
-      skills: [
-        { name: "Python for Data Analysis", level: "Intermediate" },
-        { name: "Machine Learning Concepts", level: "Beginner" },
-        { name: "Data Processing", level: "Intermediate" },
-        { name: "NumPy / Pandas", level: "Learning" }
-      ]
-    },
-    {
-      title: "Tools & Technologies",
+      title: "Frameworks & Tools",
       icon: "🛠️",
       skills: [
-        { name: "Git & GitHub", level: "Intermediate" },
-        { name: "VS Code", level: "Proficient" },
-        { name: "AutoCAD", level: "Intermediate" },
-        { name: "Microsoft Excel", level: "Intermediate" },
-        { name: "Vite / React", level: "Beginner" }
+        { name: "React", level: "Proficient" },
+        { name: "Next.js", level: "Intermediate" },
+        { name: "Node.js", level: "Proficient" },
+        { name: "Express.js", level: "Proficient" },
+        { name: "Docker", level: "Intermediate" },
+        { name: "PostgreSQL", level: "Intermediate" },
+        { name: "Redis", level: "Intermediate" }
+      ]
+    },
+    {
+      title: "Other Technologies",
+      icon: "🔧",
+      skills: [
+        { name: "Git & GitHub", level: "Proficient" },
+        { name: "GitHub Actions", level: "Intermediate" },
+        { name: "REST APIs", level: "Proficient" },
+        { name: "OAuth", level: "Intermediate" },
+        { name: "JWT Authentication", level: "Proficient" }
+      ]
+    },
+    {
+      title: "Core Subjects",
+      icon: "📚",
+      skills: [
+        { name: "Operating Systems", level: "Intermediate" },
+        { name: "DBMS", level: "Intermediate" }
       ]
     }
   ];
@@ -71,8 +79,8 @@ const Skills = () => {
         <div className="skills-note">
           <p>
             <strong>Continuous Learning:</strong> These skills reflect my current proficiency based on 
-            academic projects and hands-on practice. I'm actively expanding my knowledge and building 
-            real-world experience in AI/ML development.
+            personal projects and hands-on practice. I'm actively expanding my knowledge and building 
+            real-world experience in full-stack and AI-integrated development.
           </p>
         </div>
       </div>

@@ -3,66 +3,50 @@ import './Projects.css';
 const Projects = () => {
   const projects = [
     {
-      title: "Hospital Management System",
-      category: "Python Backend Development",
-      description: "A comprehensive Python-based backend system designed to manage patient records, doctor information, and billing operations efficiently.",
+      title: "HEMS — Hospital Emergency Management System",
+      category: "Security / Healthcare Systems (In Progress)",
+      description: "Secure, privacy-first Hospital Emergency Management System with real-time escalation workflows, consent-based photo evidence, and microservice architecture.",
       features: [
-        "Patient record management with file handling",
-        "Doctor scheduling and appointment system",
-        "Billing and invoice generation",
-        "Modular architecture for scalability"
+        "Designing a secure emergency management system with real-time escalation workflows",
+        "Implementing JWT authentication and RBAC for role-based access (patient, staff, admin, paramedic)",
+        "Developing microservice architecture with schema isolation and audit logging",
+        "Applying Row-Level Security (RLS) and encryption for sensitive healthcare data",
+        "Setting up Docker-based deployment and CI/CD pipelines"
       ],
-      techStack: ["Python", "File Handling", "Data Structures"],
+      techStack: ["TypeScript", "Next.js 14", "Express.js", "PostgreSQL", "Redis", "Docker"],
       icon: "🏥",
       gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-      githubLink: "https://github.com/Mohdaqdas05"
+      githubLink: "https://github.com/Mohdaqdas05/HEMS-security-project"
     },
     {
-      title: "Obstacle Detection Car",
-      category: "Embedded Systems & IoT",
-      description: "A sensor-based autonomous vehicle capable of detecting obstacles in real-time and avoiding collisions through intelligent decision-making algorithms.",
+      title: "AQIZA AI — AI Chat Platform",
+      category: "AI Platform / Full Stack (In Progress)",
+      description: "A production-grade ChatGPT-like AI platform with streaming responses, multi-session chat, and secure authentication.",
       features: [
-        "Real-time obstacle detection using sensors",
-        "Autonomous navigation and collision avoidance",
-        "Motor control and hardware integration",
-        "Embedded C programming for microcontrollers"
+        "Building a ChatGPT-like AI platform with multi-session chat and streaming responses",
+        "Implementing secure authentication (JWT, Google OAuth, refresh token rotation)",
+        "Integrating real-time AI streaming (SSE) for responsive chat experience",
+        "Developing admin dashboard for user management",
+        "Structuring scalable backend with rate limiting and security protections"
       ],
-      techStack: ["C Programming", "Sensors", "Microcontrollers", "Hardware Integration"],
-      icon: "🚗",
-      gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-      githubLink: "https://github.com/Mohdaqdas05"
-    },
-    {
-      title: "AQIZA AI",
-      category: "AI Platform / Full Stack",
-      description: "A production-grade ChatGPT-like AI platform with streaming responses, multi-conversation support, and Google OAuth authentication.",
-      features: [
-        "Streaming AI responses via Server-Sent Events (SSE)",
-        "Multi-conversation support with chat history",
-        "Google OAuth + JWT authentication with refresh token rotation",
-        "Plan-gated AI model selection via OpenRouter API",
-        "Admin panel with user management and stats dashboard"
-      ],
-      techStack: ["React", "Node.js", "PostgreSQL", "OpenRouter API", "JWT", "Vite"],
+      techStack: ["React", "Node.js", "Express", "PostgreSQL", "OpenRouter API"],
       icon: "🧠",
-      gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
       githubLink: "https://github.com/Mohdaqdas05/aqizaai"
     },
     {
-      title: "HEMS Security Project",
-      category: "Security / Healthcare Systems",
-      description: "Secure, privacy-first Hospital Emergency Management System with abuse-resistant emergency escalation, consent-based photo evidence, and real-time hospital availability.",
+      title: "Aqdas Portfolio Website",
+      category: "Frontend / Personal Project",
+      description: "A fully responsive personal portfolio website built with React and Vite, showcasing projects, skills, certifications, and contact functionality.",
       features: [
-        "Abuse-resistant emergency escalation system",
-        "Consent-based photo evidence handling",
-        "Real-time hospital bed & resource availability",
-        "Row-Level Security with PostgreSQL and pgcrypto encryption",
-        "Microservices architecture with Kubernetes & Istio"
+        "Developed a fully responsive personal portfolio website",
+        "Implemented modern UI with animations and interactive sections",
+        "Showcases projects, skills, certifications, and contact functionality"
       ],
-      techStack: ["Next.js", "TypeScript", "PostgreSQL", "Kubernetes", "Tailwind CSS", "Docker"],
-      icon: "🏥",
-      gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-      githubLink: "https://github.com/Mohdaqdas05/HEMS-security-project"
+      techStack: ["React", "Vite", "JavaScript", "CSS3"],
+      icon: "🌐",
+      gradient: "linear-gradient(135deg, #43cea2 0%, #185a9d 100%)",
+      githubLink: "https://github.com/Mohdaqdas05/aqdas-portfolio-new"
     }
   ];
 
