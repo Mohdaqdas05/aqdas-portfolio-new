@@ -151,7 +151,7 @@ const Hero = () => {
                 <path d="M3 8L10 13L17 8M3 6H17V14H3V6Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </button>
-            <a href={`${import.meta.env.BASE_URL}resume.pdf`} download="Mohd_Aqdas_Farooqui_Resume.pdf" className="btn-resume">
+            <a href="https://docs.google.com/document/d/14ql2AS5nHaVVneo660Qo1fIiXfevnEfmj0_uCGCmriE/export?format=pdf" target="_blank" rel="noopener noreferrer" className="btn-resume">
               <span>Download Resume</span>
               <svg className="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <path d="M10 3v10M10 13l-3-3M10 13l3-3M4 17h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
